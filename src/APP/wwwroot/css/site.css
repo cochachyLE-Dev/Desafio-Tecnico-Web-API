@@ -1,0 +1,287 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+:root {
+    --vz-border-color: #e9ebec;
+    --vz-light: #f3f6f9;
+    --vz-input-border: #ced4da;
+    --vz-input-bg: #fff;
+    --vz-body-color: #212529;
+    --vz-input-check-border: #ced4da;
+}
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+
+
+.table th {
+    font-weight: 600;
+}
+
+.table .table-light {
+    color: #212529;
+    border-color: var(--vz-border-color);    
+}
+
+.table-light, .table-light > td, .table-light > th {
+    background-color: #fff !important;
+}
+
+.table > thead {
+    border-color: var(--vz-border-color);
+}
+
+.table > :not(:first-child) {
+    border-top-width: 1px;
+}
+
+.table-nowrap th,
+.table-nowrap td {
+    white-space: nowrap;
+}
+
+.table-card th:first-child,
+.table-card td:first-child {
+    padding-right: 16px;
+}
+
+.table-card th:last-child,
+.table-card td:last-child {
+    padding-left: 16px;
+}
+
+.table-card .table > :not(:first-child) {
+    border-top-width: 1px;
+}
+
+.border-primary.table > thead {
+    border-color: #d50000 !important;
+}
+
+.table-primary.table > thead {
+    border-bottom-color: #5066ac !important;
+}
+
+.border-secondary.table > thead {
+    border-color: #3577f1 !important;
+}
+
+.table-secondary.table > thead {
+    border-bottom-color: #6597f4 !important;
+}
+
+.border-success.table > thead {
+    border-color: #0ab39c !important;
+}
+
+.table-success.table > thead {
+    border-bottom-color: #0de3c6 !important;
+}
+
+.border-info.table > thead {
+    border-color: #299cdb !important;
+}
+
+.table-info.table > thead {
+    border-bottom-color: #55b0e2 !important;
+}
+
+.border-warning.table > thead {
+    border-color: #f7b84b !important;
+}
+
+.table-warning.table > thead {
+    border-bottom-color: #f9cb7c !important;
+}
+
+.border-danger.table > thead {
+    border-color: #f06548 !important;
+}
+
+.table-danger.table > thead {
+    border-bottom-color: #f48d77 !important;
+}
+
+.border-light.table > thead {
+    border-color: #f3f6f9 !important;
+}
+
+.table-light.table > thead {
+    border-bottom-color: white !important;
+}
+
+.border-dark.table > thead {
+    border-color: #212529 !important;
+}
+
+.table-dark.table > thead {
+    border-bottom-color: #383f45 !important;
+}
+
+.table .form-check {
+    padding-right: 0px;
+    margin-bottom: 0px;
+}
+
+.table .form-check .form-check-input {
+    margin-right: 0px;
+    margin-top: 0px;
+    float: none;
+    vertical-align: middle;
+}
+
+.form-select {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 2.7rem 0.5rem 0.9rem;
+    -moz-padding-start: calc(.9rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--vz-body-color);
+    background-color: var(--vz-input-bg);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    background-size: 16px 12px;
+    border: 1px solid var(--vz-input-border);
+    border-radius: 0.25rem;
+    -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select {
+    word-wrap: normal;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.search-box .form-control {
+    padding-left: 40px;
+}
+.search-box {
+    position: relative;
+}
+.search-box .search-icon {
+    font-size: 14px;
+    position: absolute;
+    left: 13px;
+    top: 0;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #878a99;
+}
+.table .form-check {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+textarea {
+    border-color: var(--vz-input-border);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.form-textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 2.7rem 0.5rem 0.9rem;
+    -moz-padding-start: calc(.9rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--vz-body-color);    
+    border: 1px solid var(--vz-input-border);
+    border-radius: 0.25rem;
+    -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

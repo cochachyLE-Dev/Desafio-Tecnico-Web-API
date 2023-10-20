@@ -1,0 +1,50 @@
+﻿@model IEnumerable<APP.Models.OrderDetailModel>
+
+<div id="orderDet">
+    <div class="row g-4 mb-3">
+        <div class="col-sm-auto">
+            <div>
+                <button type="submit" class="btn btn-success add-btn" id="add-btn"><i class="ri-add-line align-bottom me-1"></i>Agregar producto</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive table-card mt-3 mb-1">
+        <table class="table align-middle table-nowrap" id="solicitudDetTable">
+            <thead class="table-light">
+                <tr>                                        
+                    <th class="sort" data-sort="description">@Html.DisplayNameFor(p => p.Description)</th>
+                    <th class="sort" data-sort="qty">@Html.DisplayNameFor(p => p.Qty)</th>
+                    <th class="sort" data-sort="unitPrice">@Html.DisplayNameFor(p => p.UnitPrice)</th>
+                    <th class="sort" data-sort="total">@Html.DisplayNameFor(p => p.Total)</th>
+                    <th class="sort" data-sort="action">Action</th>
+                </tr>
+            </thead>
+            <tbody class="list form-check-all">
+                @foreach (var item in Model)
+                {
+                    <tr>                                                
+                        <td class="description">@Html.DisplayFor(p => item.Description)</td>
+                        <td class="qty">@Html.DisplayFor(p => item.Qty)</td>
+                        <td class="unitPrice">@Html.DisplayFor(p => item.UnitPrice)</td>
+                        <td class="total">@Html.DisplayFor(p => item.Total)</td>
+                        <td>
+                            <div class="d-flex gap-2">                                
+                                <div class="remove">          
+                                    <button id="remove-item-btn" class="btn btn-sm btn-danger remove-item-btn" data-orderId="@item.OrderId" data-productId="@item.ProductId">Remove</button>                                    
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="noresult" style="display: @Html.Raw(Model.Any() ? "none" : "block")">
+            <div class="text-center">
+                <p class="text-muted mb-0">
+                    Without items in detail
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

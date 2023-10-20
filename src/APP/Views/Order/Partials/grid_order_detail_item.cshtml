@@ -1,0 +1,51 @@
+﻿@model APP.Models.Order.ViewModels.CreateDetailViewModel
+
+<form id="detail-item-add" action="javascript:void(0)">
+    @Html.AntiForgeryToken()
+    <div class="modal-body">
+
+        <div class="mb-3" id="modal-id" style="display: none;">
+            <label asp-for="Item.OrderId" class="form-label"></label>
+            <input asp-for="Item.OrderId" type="text" class="form-control" readonly />
+        </div>
+
+        <div class="mb-3" id="modal-id" style="display: none;">            
+            <label asp-for="Item.ClientId" class="form-label"></label>
+            <input asp-for="Item.ClientId" type="text" class="form-control" readonly />
+        </div>
+
+        <div>
+            <label asp-for="Item.ProductId" class="form-label"></label>
+            <select asp-for="Item.ProductId" class="form-select" asp-items="Model.Products" required>
+                <option selected>search product</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Item.UnitPrice" class="form-label"></label>
+            <input asp-for="Item.UnitPrice" type="text" class="form-control" placeholder="0.00" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Item.Qty" class="form-label"></label>
+            <input asp-for="Item.Qty" type="text" class="form-control" placeholder="0" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Item.Total" class="form-label"></label>
+            <input asp-for="Item.Total" type="text" class="form-control" placeholder="0.00" required />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Item.Description" class="form-label"></label>            
+            <input asp-for="Item.Description" type="hidden" />
+            <textarea class="form-textarea" id="description" style="height: 100px;"></textarea>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="hstack gap-2 justify-content-end">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Back</button>
+            <button type="submit" class="btn btn-success" id="add-btn-detail">Add</button>
+        </div>
+    </div>
+</form>
